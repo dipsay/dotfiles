@@ -1,1 +1,3 @@
-# dotfiles
+### dotfiles...
+
+Nothing here yet but I will start adding configs soon.
