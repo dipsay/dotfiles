@@ -4,16 +4,16 @@ import Colors.RosePine
 
 config :: Config
 config = defaultConfig {
-  font = "xft:Fira Colde-10"
+  font = "xft:Fira Code-10"
   , bgColor = color1
   , fgColor = color2
   , position = Top
   , commands = [ Run $ Date "%a %b %_d %Y %H:%M:%S" "date" 10
-               , Run $ StdinReader
+               , Run $ XMonadLog
                ]
   , sepChar = "%"
   , alignSep = "}{"
-  , template = "%StdinReader% | }{ %date%"
+  , template = "%XMonadLog% }{ %date%"
   }
 
 main :: IO ()

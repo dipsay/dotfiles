@@ -1,0 +1,4 @@
+.config/nvim/plugin
+*.hi
+*.o
+.config/xmonad/xmobar
