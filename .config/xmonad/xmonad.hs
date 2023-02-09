@@ -31,7 +31,7 @@ myWeb :: String
 myWeb = "firefox"
 
 myEdit :: String
-myEdit = "alacritty -e neovim"
+myEdit = "alacritty -e nvim"
 
 myBorderW :: Dimension
 myBorderW = 1
