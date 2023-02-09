@@ -34,7 +34,7 @@ myEdit :: String
 myEdit = "alacritty -e nvim"
 
 myScreenShot :: String
-myScreenShot = "flameshot screen" 
+myScreenShot = "mss" 
 
 myBorderW :: Dimension
 myBorderW = 1
