@@ -33,6 +33,9 @@ myWeb = "firefox"
 myEdit :: String
 myEdit = "alacritty -e nvim"
 
+myScreenShot :: String
+myScreenShot = "flameshot screen" 
+
 myBorderW :: Dimension
 myBorderW = 1
 
@@ -54,13 +57,10 @@ myLayouts = smartBorders tiled ||| Mirror tiled ||| Full
 
 main :: IO ()
 main = xmonad
-    . withEasySB mySB defToggleStrutsKey
+    . withEasySB (mySB1 <> mySB2) defToggleStrutsKey
     . ewmh
     . ewmhFullscreen
     $ myConfig
-  where
-    toggleStrutsKey :: XConfig Layout -> (KeyMask, KeySym)
-    toggleStrutsKey XConfig {modMask = m} = (m, xK_b)
 
 myConfig = def
     { modMask = mod4Mask
@@ -75,7 +75,8 @@ myStart :: X ()
 myStart = do
     setDefaultCursor xC_left_ptr
 
-mySB = statusBarProp "xmobar ~/.config/xmonad/xmobar.hs" (pure myXmobarPP)
+mySB1 = statusBarProp "xmobar -x 0 ~/.config/xmonad/xmobar.hs" (pure myXmobarPP)
+mySB2 = statusBarProp "xmobar -x 1 ~/.config/xmonad/xmobar.hs" (pure myXmobarPP)
 
 myXmobarPP :: PP
 myXmobarPP = def
@@ -109,4 +110,5 @@ myKeys =
     , ("M-<Return>", spawn (myTerm))
     , ("M-w", spawn (myWeb))
     , ("M-e", spawn (myEdit))
+    , ("M-S-s", spawn (myScreenShot))
     ]

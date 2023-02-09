@@ -23,6 +23,7 @@ require('packer').startup(function(use)
 	use 'nvim-lua/plenary.nvim'
 	use 'sbdchd/neoformat'
     use 'akinsho/toggleterm.nvim'
+    use 'norcalli/nvim-colorizer.lua'
     use 'xiyaowong/nvim-transparent'
 	use 'rose-pine/neovim'
 end)
