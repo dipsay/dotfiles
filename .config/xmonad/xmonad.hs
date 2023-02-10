@@ -46,9 +46,9 @@ myFocusC :: String
 myFocusC = color3
 
 mySpacing :: Integer -> l a -> XMonad.Layout.LayoutModifier.ModifiedLayout Spacing l a
-mySpacing i = spacingRaw False (Border i i i i) True (Border i i i i) True
+mySpacing i = spacingRaw True (Border i i i i) True (Border i i i i) True
 
-myLayouts = smartBorders tiled ||| Mirror tiled ||| Full
+myLayouts =  lessBorders (Combine Union Screen OnlyFloat) tiled ||| Mirror tiled ||| Full
   where
     tiled = Tall nmaster delta ratio
     nmaster = 1
@@ -65,7 +65,7 @@ main = xmonad
 myConfig = def
     { modMask = mod4Mask
     , startupHook = myStart
-    , layoutHook = mySpacing 3 $ myLayouts
+    , layoutHook = mySpacing 5 $ myLayouts
     , borderWidth = myBorderW
     , normalBorderColor = myNormC
     , focusedBorderColor = myFocusC

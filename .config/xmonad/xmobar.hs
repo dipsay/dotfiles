@@ -4,10 +4,11 @@ import Colors.RosePine
 
 config :: Config
 config = defaultConfig {
-  font = "xft:Fira Code-10"
+  font = "xft:Fira Code-9"
+  , additionalFonts = ["xft:Hack Nerd Font-10"]
   , bgColor = color1
   , fgColor = color2
-  , alpha = 240
+  , alpha = 242
   , allDesktops = True
   , overrideRedirect = False
   , position = Top
@@ -18,7 +19,7 @@ config = defaultConfig {
                ]
   , sepChar = "%"
   , alignSep = "}{"
-  , template = "%XMonadLog% }{ %memory% | %cpu% | %date% "
+  , template = " <fn=1>\xf0c92</fn> %XMonadLog% }{ %memory% | %cpu% | %date% "
   }
 
 main :: IO ()
