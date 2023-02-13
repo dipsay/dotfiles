@@ -36,6 +36,9 @@ myEdit = "alacritty -e nvim"
 myScreenShot :: String
 myScreenShot = "mss" 
 
+myMC :: String
+myMC = "multimc --launch 1.19.3"
+
 myBorderW :: Dimension
 myBorderW = 1
 
@@ -111,4 +114,5 @@ myKeys =
     , ("M-w", spawn (myWeb))
     , ("M-e", spawn (myEdit))
     , ("M-S-s", spawn (myScreenShot))
+    , ("M-S-m", spawn (myMC))
     ]

@@ -2,3 +2,4 @@
 *.hi
 *.o
 .config/xmonad/xmobar
+.config/alacritty/themes
