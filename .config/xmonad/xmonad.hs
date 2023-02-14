@@ -31,7 +31,7 @@ myWeb :: String
 myWeb = "firefox"
 
 myEdit :: String
-myEdit = "alacritty -e nvim"
+myEdit = "vscodium"
 
 myScreenShot :: String
 myScreenShot = "mss" 
