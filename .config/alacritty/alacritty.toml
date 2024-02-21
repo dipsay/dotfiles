@@ -1,3 +1,7 @@
+import = [
+  "~/.config/alacritty/catppuccin-mocha.toml",
+]
+
 [window]
 padding = { x = 3, y = 3 }
 dynamic_padding = true
@@ -6,3 +10,4 @@ dynamic_title = true
 
 [font]
 normal = { family = "FiraCode Nerd Font", style = "monospace" }
+
